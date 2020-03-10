@@ -1,7 +1,7 @@
 let api = 'api_key=80bfcbf357864cd18518c324f47a7098';
 let url = 'https://api.giphy.com/v1/gifs/trending?';
 
-const gifsBox = document.querySelector('.random');
+const gifsBox = document.querySelector('.tend');
 
 
 fetch(url + api)

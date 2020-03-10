@@ -326,14 +326,33 @@ html {
 	height: 33px;
 }
 
-.random {
+/* Imágenes de tendencia */
+
+.tend {
 	width: calc(250px * 4 + 3rem);
 	margin: auto;
 	columns: 4;
 	column-gap: 1rem;
-	padding-top: 3rem;
+	padding-top: 2.5rem;
 }
 
-.random img {
+.tend img {
 	width: 250px;
+}
+
+.tendencias {
+	width: calc(252px * 4 + 3rem);
+	height: 32px;
+	margin: auto;
+	background: #fffafe;
+	border: 1px solid #e6bbe2;
+	box-shadow: inset -2px -2px 0 0 #e6dce4, inset 2px 2px 0 0 #80687d;
+}
+
+.tendencias p {
+	font-family: ChakraPetch-Regular;
+	font-size: 14px;
+	color: #110038;
+	letter-spacing: 0;
+	padding: 7px;
 }
