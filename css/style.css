@@ -325,3 +325,15 @@ html {
 	border: 1px black solid;
 	height: 33px;
 }
+
+.random {
+	width: calc(250px * 4 + 3rem);
+	margin: auto;
+	columns: 4;
+	column-gap: 1rem;
+	padding-top: 3rem;
+}
+
+.random img {
+	width: 250px;
+}
