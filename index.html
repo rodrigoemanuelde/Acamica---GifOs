@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>GifOs</title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link id="favicon" rel="icon" type="image/png" href="" />
-	</head>
-	<body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GifOs</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link id="favicon" rel="icon" type="image/png" href="" />
+</head>
+
+<body>
+	<header>
 		<section class="barra-contador">
 			<p>
 				¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
 				de visitas: <span id="contador"></span>
 			</p>
 		</section>
+	</header>
 
-		<nav class="nav">
-			<img id="logo" src="" alt="logo GifOf" />
-			<div class="botones">
-				<button class="crear" id="crear">
-					<a href="#">Crear Gifo</a>
+	<nav class="nav">
+		<img id="logo" src="" alt="logo GifOf" />
+		<div class="botones">
+			<button class="crear" id="crear">
+				<a href="#">Crear Gifo</a>
+			</button>
+
+			<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn">
+					Elegir tema
+					<span></span>
+					<i onclick="myFunction()">
+						<img onclick="myFunction()" src="img/dropdown.svg" alt="flecha abajo menu" />
+					</i>
 				</button>
-
-				<div class="dropdown">
-					<button onclick="myFunction()" class="dropbtn">
-						Elegir tema
-						<span></span>
-						<i onclick="myFunction()">
-							<img
-								onclick="myFunction()"
-								src="img/dropdown.svg"
-								alt="flecha abajo menu"
-							/>
-						</i>
-					</button>
-					<div id="myDropdown" class="dropdown-content">
-						<ul>
-							<li class="day" id="day"><a href="#home">Sailor Day</a></li>
-							<li class="night" id="night" class="night">
-								<a href="#about">Sailor Night</a>
-							</li>
-						</ul>
-					</div>
+				<div id="myDropdown" class="dropdown-content">
+					<ul>
+						<li class="day" id="day"><a href="#home">Sailor Day</a></li>
+						<li class="night" id="night" class="night">
+							<a href="#about">Sailor Night</a>
+						</li>
+					</ul>
 				</div>
-				<a href="#" class="mis"> <span class="m">M</span>is gifos</a>
 			</div>
-		</nav>
+			<a href="#" class="mis"> <span class="m">M</span>is gifos</a>
+		</div>
+	</nav>
 
+	<main>
 		<section class="barra-busqueda">
 			<div class="barra-larga">
 				<h3>Buscar</h3>
@@ -54,12 +55,8 @@
 			<div class="container">
 				<busqueda>
 					<form id="search-form">
-						<input
-							id="search-input"
-							type="text"
-							placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-							required
-						/>
+						<input id="search-input" type="text"
+							placeholder="Busca gifs, hashtags, temas, busca lo que quieras…" required />
 						<button type="submit">
 							<img src="img/lupa_inactive.svg" alt="lupa" /> Search
 						</button>
@@ -68,8 +65,10 @@
 			</div>
 		</section>
 		<div id="results" class="results">
-			<!--- Insertar gif--->
+			<!--- Insertar gif de búsqueda--->
 		</div>
+
+		<!-- Gif Random x4 -->
 		<section class="ranDom">
 			<div class="tendencias">
 				<p>Hoy te sugerimos:</p>
@@ -127,5 +126,12 @@
 		<script src="js/contador.js"></script>
 		<script src="js/theme.js"></script>
 		<script src="js/dropdown.js"></script>
-	</body>
+	</main>
+	<footer>
+		<section class="barra-footer">
+			<p>©Copyright 2020 by Rodrigoemanuelde. All rights reversed.</p>
+		</section>
+	</footer>
+</body>
+
 </html>

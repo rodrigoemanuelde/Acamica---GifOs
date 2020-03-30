@@ -75,6 +75,43 @@ html {
 	z-index: 2;
 }
 
+.barra-footer {
+	background-image: var(--bg-linea-sp);
+	box-shadow: var(--box-shadow-bs);
+	font-family: ChakraPetch-Regular;
+	font-size: 0.75rem;
+	color: var(--color-bs);
+	letter-spacing: 0;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.5rem;
+	z-index: 2;
+	margin-top: 20px;
+}
+
+/* .barra-footer p {
+	text-align: center;
+} */
+
+.barra-random {
+	background-image: var(--bg-linea-sp);
+	box-shadow: var(--box-shadow-bs);
+	font-family: ChakraPetch-Regular;
+	font-size: 0.75rem;
+	color: var(--color-bs);
+	letter-spacing: 0;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.5rem;
+	z-index: 2;
+}
+
+.imgrandom div .ranDom {
+	background: #E6E6E6;
+	box-shadow: inset -2px -2px 0 0 #B4B4B4,
+		inset 2px 2px 0 0 #FFFFFF;
+}
+
 .container button {
 	margin: 0.5rem;
 	background: #e6e6e6;
@@ -322,8 +359,8 @@ html {
 }
 
 .dropdown button span {
-	border: 1px black solid;
-	height: 33px;
+	border: 0.5px black solid;
+	height: 29px;
 }
 
 /* Imágenes de tendencia */
