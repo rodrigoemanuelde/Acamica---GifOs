@@ -9,7 +9,7 @@ function myFunction() {
 window.onclick = function (event) {
     if (!event.target.matches(".dropbtn") && !event.target.matches("img")) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
+        let i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains("show")) {

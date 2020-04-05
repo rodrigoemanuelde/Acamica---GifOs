@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Gifo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link id="favicon" rel="icon" type="image/png" href="" />
+</head>
+
+<body>
+    <header>
+        <section class="barra-contador">
+            <p>
+                ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+                están.////// Número de visitas: <span id="contador"></span>
+            </p>
+        </section>
+    </header>
+
+    <nav class="nav">
+        <img id="logo" src="" alt="logo GifOf" />
+        <div class="botones">
+            <button class="crear" id="crear">
+                <a href="#">Crear Gifo</a>
+            </button>
+
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">
+                    Elegir tema
+                    <span></span>
+                    <i onclick="myFunction()">
+                        <img onclick="myFunction()" src="img/dropdown.svg" alt="flecha abajo menu" />
+                    </i>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li class="day" id="day">
+                            <a href="#home">Sailor Day</a>
+                        </li>
+                        <li class="night" id="night" class="night">
+                            <a href="#about">Sailor Night</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="mis" id="misGif"> <span class="m">M</span>is gifos</a>
+        </div>
+    </nav>
+    <main>
+
+    </main>
+    <footer>
+        <section class="barra-footer">
+            <p>
+                ©Copyright 2020 by Rodrigoemanuelde. All rights reversed.
+            </p>
+        </section>
+    </footer>
+    <script src="js/contador.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/page.js"></script>
+</body>
+
+</html>
