@@ -1,4 +1,9 @@
 :root {
+
+	/*Font family*/
+	--font-family: 'Chakra Petch',
+		sans-serif;
+
 	/* Fondo de página -fondo*/
 	--bgn-fondo: #fff4fd;
 
@@ -7,7 +12,6 @@
 
 	/*Barra superior -bs*/
 	--box-shadow-bs: 0 1px 0 0 #110038;
-	--font-fm-bs: ChakraPetch-Regular;
 	--font-sz-bs: 12px;
 	--color-bs: #ffffff;
 	--let-sp-bs: 0;
@@ -17,10 +21,15 @@
 	--bgn-bm: #f7c9f3;
 	--border-bm: 1px solid #110038;
 	--box-shadow-bm: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+	--color-bm: #110038;
 
 	/* Barra buscador -bb*/
 	--bg-bb: #e6e6e6;
 	--box-shadow-bb: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+	/* Botón dropdown*/
+	--dropdown-btn1: #fff4fd;
+	--dropdown-btn2: #F0F0F0;
 }
 
 [dataTheme="dark"] {
@@ -33,7 +42,6 @@
 
 	/*Barra superior*/
 	--box-shadow-bs: 0 1px 0 0 #110038;
-	--font-fm-bs: ChakraPetch-Regular;
 	--font-sz-bs: 12px;
 	--color-bs: #ffffff;
 	--let-sp-bs: 0;
@@ -43,8 +51,13 @@
 	--bgn-bm: #ee3efe;
 	--border-bm: 1px solid #110038;
 	--box-shadow-bm: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+	--color-bm: #ffffff;
 
 	/* Barra buscador */
+
+	/* Botón dropdown*/
+	--dropdown-btn1: #CCCCCC;
+	--dropdown-btn2: #2E32FB;
 }
 
 /* ----------------------------------------------- */
@@ -65,7 +78,7 @@ html {
 .barra-contador {
 	background-image: var(--bg-linea-sp);
 	box-shadow: var(--box-shadow-bs);
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 0.75rem;
 	color: var(--color-bs);
 	letter-spacing: 0;
@@ -78,7 +91,7 @@ html {
 .barra-footer {
 	background-image: var(--bg-linea-sp);
 	box-shadow: var(--box-shadow-bs);
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 0.75rem;
 	color: var(--color-bs);
 	letter-spacing: 0;
@@ -96,7 +109,7 @@ html {
 .barra-random {
 	background-image: var(--bg-linea-sp);
 	box-shadow: var(--box-shadow-bs);
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 0.75rem;
 	color: var(--color-bs);
 	letter-spacing: 0;
@@ -117,7 +130,7 @@ html {
 	background: #e6e6e6;
 	border: 1px solid #808080;
 	box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 1rem;
 	color: #b4b4b4;
 	letter-spacing: 0;
@@ -155,7 +168,8 @@ html {
 
 .barra-larga {
 	background-image: var(--bg-linea-sp);
-	font-family: ChakraPetch-Bold;
+	font-family: var(--font-family);
+	font-weight: 800;
 	font-size: 0.875rem;
 	color: var(--color-bs);
 	letter-spacing: 0;
@@ -166,7 +180,7 @@ html {
 }
 
 #search-input {
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 1rem;
 	color: #b4b4b4;
 	letter-spacing: 0;
@@ -181,7 +195,7 @@ html {
 }
 
 #search-input:hover {
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 1rem;
 	color: #110038;
 	letter-spacing: 0;
@@ -240,7 +254,7 @@ html {
 	border: 1px solid #110038;
 	box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 	cursor: pointer;
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 16px;
 	color: #110038;
 	letter-spacing: 0;
@@ -250,6 +264,7 @@ html {
 
 .nav div .crear a {
 	color: var(--color-bm);
+	font-family: var(--font-family);
 }
 
 .dropbtn {
@@ -262,9 +277,9 @@ html {
 	width: 167px;
 	height: 36px;
 	text-align: center;
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 16px;
-	color: #110038;
+	color: var(--color-bm);
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 18px;
@@ -277,9 +292,9 @@ html {
 }
 
 .nav div .mis {
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 16px;
-	color: #110038;
+	color: var(--color-bm);
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 18px;
@@ -296,7 +311,7 @@ html {
 .nav ul li {
 	width: 150px;
 	height: 36px;
-	background: var(--bgn-bm);
+	background: var(--dropdown-btn1);
 	border: 1px solid #cca6c9;
 	box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
 	margin-left: auto;
@@ -304,17 +319,21 @@ html {
 	margin-top: 9px;
 	text-align: center;
 	cursor: pointer;
+
 }
 
 .nav ul li a {
 	transform: translate(0%, 40%);
 	pointer-events: none;
 	cursor: default;
+	color: var(--dropdown-color);
+	font-family: var(--font-family);
 }
 
 .nav ul .night {
-	background: #e6e6e6;
+	background: var(--dropdown-btn2);
 	box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+	color: #ffffff;
 }
 
 /* .dropbtn:hover,
@@ -336,7 +355,7 @@ html {
 }
 
 .dropdown-content a {
-	color: black;
+	color: var(--color-bm);
 	text-decoration: none;
 	display: block;
 }
@@ -387,7 +406,7 @@ html {
 }
 
 .tendencias p {
-	font-family: ChakraPetch-Regular;
+	font-family: var(--font-family);
 	font-size: 14px;
 	color: #110038;
 	letter-spacing: 0;
@@ -406,4 +425,18 @@ html {
 .ranDom img {
 	width: 250px;
 	height: 250px;
+}
+
+.btn-suge a {
+	color: var(--color-bm);
+}
+
+.btn-suge button {
+	width: 81px;
+	height: 34px;
+	background: #2E32FB;
+	border: 1px solid #4C2F99;
+	box-shadow: inset -2px -2px 0 0 #2124B3,
+		inset 2px 2px 0 0 #FFFFFF;
+
 }
