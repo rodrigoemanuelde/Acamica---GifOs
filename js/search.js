@@ -10,7 +10,7 @@ searchForm.addEventListener('submit', function (e) {
 });
 
 function search(q) {
-    const apikey = 'mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx'
+    const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC'
     const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`
 
     // Busqueda

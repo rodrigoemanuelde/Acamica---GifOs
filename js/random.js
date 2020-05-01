@@ -1,5 +1,5 @@
 const url = 'https://api.giphy.com/v1/gifs/random?';
-const apiKey = 'mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx';
+const apiKey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
 
 fetch(url + "&api_key=" + apiKey)
     .then(res => res.json())
