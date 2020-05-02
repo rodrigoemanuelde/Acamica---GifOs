@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2019 (64-Bit) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 21000 29700"
- xmlns:xlink="http://www.w3.org/1999/xlink"
- xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
- <defs>
-  <style type="text/css">
-   <![CDATA[
-    .str0 {stroke:#FEFEFE;stroke-width:20;stroke-miterlimit:22.9256}
-    .fil0 {fill:#FEFEFE}
-   ]]>
-  </style>
- </defs>
- <g id="Capa_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <polygon id="back-copy" class="fil0 str0" points="1190.16,4613.43 1163.7,4613.43 1163.7,4586.97 1137.24,4586.97 1137.24,4560.51 1110.79,4560.51 1110.79,4534.05 1084.33,4534.05 1084.33,4507.59 1322.45,4507.6 1322.45,4534.05 1295.99,4534.05 1295.99,4560.51 1269.54,4560.51 1269.53,4586.97 1243.08,4586.97 1243.08,4613.43 1216.62,4613.43 1216.62,4639.89 1190.16,4639.89 "/>
- </g>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gifOS_misguifos" transform="translate(-1184.000000, -83.000000)">
+            <g id="nav-bar" transform="translate(1.000000, 1.000000)">
+                <g id="dropdown_tema_normal" transform="translate(1038.000000, 67.000000)">
+                    <g id="dropdown" transform="translate(150.000000, 18.000000) rotate(-270.000000) translate(-150.000000, -18.000000) translate(147.000000, 13.000000)">
+                        <path d="M4,5 L4,6 L3,6 L3,7 L2,7 L2,8 L1,8 L1,9 L0,9 L0,0 L1,0 L1,1 L2,1 L2,2 L3,2 L3,3 L4,3 L4,4 L5,4 L5,5 L4,5 Z" id="back-copy" fill="#FFFFFF"></path>
+                        <path d="M1,9 L1,8 L2,8 L2,7 L3,7 L3,6 L4,6 L4,5 L6,5 L6,6 L5,6 L5,7 L4,7 L4,8 L3,8 L3,9 L2,9 L2,10 L1,10 L1,9 Z" id="Combined-Shape" fill="#110038"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
 </svg>

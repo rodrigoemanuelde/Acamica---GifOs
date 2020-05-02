@@ -16,29 +16,28 @@ function search(q) {
     // Busqueda
     //https://api.giphy.com/v1/gifs/search?api_key=mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx&q=cats
 
-    fetch(path).then(function (res) {
-        return res.json()
-    }).then(function (json) {
-        console.log(json.data[0].images.fixed_width.url)
-        let resultsHTML = ''
+    fetch(path).then((res) => res.json())
+        .then(function (json) {
+            console.log(json.data[0].images.fixed_width.url)
+            let resultsHTML = ''
 
-        json.data.forEach(function (obj) {
-            const url = obj.images.fixed_width.url
-            const width = obj.images.fixed_width.width
-            const height = obj.images.fixed_width.height
-            const title = obj.title
+            json.data.forEach(function (obj) {
+                const url = obj.images.fixed_width.url
+                const width = obj.images.fixed_width.width
+                const height = obj.images.fixed_width.height
+                const title = obj.title
 
 
-            resultsHTML += `<img 
+                resultsHTML += `<img 
             class="item"
             src="${url}" 
             width="${width}" 
             height="${height}"
             alt="${title}">`
-        });
+            });
 
-        resultEl.innerHTML = resultsHTML
-    }).catch(function (err) {
-        console.log(err.message)
-    })
+            resultEl.innerHTML = resultsHTML
+        }).catch(function (err) {
+            console.log(err.message)
+        })
 }
