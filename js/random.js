@@ -5,8 +5,8 @@ fetch(url + "&api_key=" + apiKey)
     .then(res => res.json())
     .then(data => {
         //console.log(data.data)
-        let element = document.getElementById('random')
-        random.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
+        let element1 = document.getElementById('random0')
+        element1.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
         //console.log(data.data.fixed_width_downsampled_url)
 
     })
@@ -16,8 +16,8 @@ fetch(url + "&api_key=" + apiKey)
     .then(res => res.json())
     .then(data => {
         //console.log(data.data.image_url)
-        let element = document.getElementById('random1')
-        random1.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
+        let element2 = document.getElementById('random1')
+        element2.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
     })
     .catch(err => console.log(err))
 
@@ -25,8 +25,8 @@ fetch(url + "&api_key=" + apiKey)
     .then(res => res.json())
     .then(data => {
         //console.log(data.data.image_url)
-        let element = document.getElementById('random2')
-        random2.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
+        let element3 = document.getElementById('random2')
+        element3.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
     })
     .catch(err => console.log(err))
 
@@ -34,7 +34,7 @@ fetch(url + "&api_key=" + apiKey)
     .then(res => res.json())
     .then(data => {
         //console.log(data.data.image_url)
-        let element = document.getElementById('random3')
-        random3.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
+        let element4 = document.getElementById('random3')
+        element4.innerHTML = `<img src="${data.data.fixed_width_downsampled_url}">`
     })
     .catch(err => console.log(err))

@@ -6,25 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>GifOs</title>
 	<link rel="stylesheet" href="css/style.css" />
-	<link id="favicon" rel="icon" type="image/png" href="" />
+	<link id="favicon" rel="icon" type="image/png" href="#" />
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 	<header>
-		<section class="barra-contador">
+		<div class="barra-contador">
 			<p>
 				¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
 				están.////// Número de visitas: <span id="contador"></span>
 			</p>
-		</section>
+		</div>
 	</header>
 
 	<nav class="nav">
-		<img id="logo" src="" alt="logo GifOf" />
+		<img id="logo" src="#" alt="logo GifOf" />
 		<div class="botones">
 			<button class="crear" id="crear">
-				<a href="#">Crear Gifo</a>
+				Crear Gifo
 			</button>
 
 			<div class="dropdown">
@@ -32,7 +32,7 @@
 					Elegir tema
 					<span></span>
 					<i onclick="myFunction()">
-						<img onclick="myFunction()" src="img/dropdown.svg" alt="flecha abajo menu" />
+						<img onclick="myFunction()" src="img/dropdown.svg" alt="flecha abajo menu" id="arrow" />
 					</i>
 				</button>
 				<div id="myDropdown" class="dropdown-content">
@@ -49,7 +49,7 @@
 			<a href="#" class="mis" id="misGif"> <span class="m">M</span>is gifos</a>
 		</div>
 	</nav>
-
+	<!--- Barra de búsqueda--->
 	<main>
 		<section class="barra-busqueda">
 			<div class="barra-larga">
@@ -81,7 +81,7 @@
 					<div class="barra-random">
 						<p id="tituloGif">#titulo</p>
 					</div>
-					<div id="random"></div>
+					<div id="random0"></div>
 					<div class="btn-suge" id="btn-suge-cont">
 						<button class="btn"><a href="#">ver mas...</a></button>
 					</div>
@@ -115,6 +115,7 @@
 				</div>
 			</div>
 		</section>
+		<!-- Sección de tendencias -->
 		<section>
 			<div class="tendencias">
 				<p>Tendencias</p>
@@ -126,11 +127,11 @@
 
 	</main>
 	<footer>
-		<section class="barra-footer">
+		<div class="barra-footer">
 			<p>
 				©Copyright 2020 by Rodrigoemanuelde. All rights reversed.
 			</p>
-		</section>
+		</div>
 	</footer>
 	<script src="js/random.js"></script>
 	<script src="js/tend.js"></script>
