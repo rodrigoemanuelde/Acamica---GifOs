@@ -41,3 +41,12 @@ function search(q) {
             console.log(err.message)
         })
 }
+
+
+function autocompleteSearch() {
+    const found = fetch(`https://api.giphy.com/v1/gifs/search/tags?q=${earchInput}&api_key=${apikey}&limit=3`)
+        .then(data => data.json())
+        .then(content => content)
+        .catch(e => console.log(e))
+    return found;
+}
