@@ -33,6 +33,9 @@
 
     --font-color1: #110038;
     --font-color2: #110038;
+
+    /* Box random*/
+    --bgn-btn: #4180F6;
 }
 
 [dataTheme="dark"] {
@@ -69,6 +72,9 @@
 
     --font-color1: #110038;
     --font-color2: #FFFFFF;
+
+    /* Box random*/
+    --bgn-btn: #2E32FB;
 }
 
 /* ----------------------------------------------- */
@@ -455,7 +461,7 @@ html {
 .btn {
     width: 81px;
     height: 34px;
-    background: #2E32FB;
+    background: var(--bgn-btn);
     border: 1px solid #4C2F99;
     box-shadow: inset -2px -2px 0 0 #2124B3,
         inset 2px 2px 0 0 #FFFFFF;
@@ -474,5 +480,49 @@ html {
     width: 283px;
 }
 
+#tituloGif0,
+#tituloGif1,
+#tituloGif2,
+#tituloGif3 {
+    display: flex;
+    align-items: center;
+}
+
 
 /*---------------------------------------------*/
+
+/* Sugrencias de búsqueda*/
+
+.sugerencias {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    height: 140px;
+    width: calc(280px * 4 + 3rem);
+    margin-left: 172px;
+    padding: 0.21rem;
+    position: absolute;
+    /* display: none; */
+}
+
+.sugerencias p {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    height: 34px;
+    width: 74%;
+    margin-left: 0.5rem;
+    margin: 10px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.sugerencias p:hover {
+    border: 1px solid #110038;
+    border-style: dotted;
+    padding: -5px;
+}

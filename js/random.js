@@ -19,7 +19,7 @@ fetch(url + "&api_key=" + apiKey)
             //traigo el título y lo corto en 4 palabras
             titulo = data.data.title.split(" ", 4);
             //uno el array como string
-            tituloCortado = titulo.join(" ");
+            tituloCortado = titulo.join("");
             //inserto el titulo Cortado
             nombre0.innerHTML = `<p id="tituloGif0">#${tituloCortado}</>`
         }
@@ -46,7 +46,7 @@ fetch(url + "&api_key=" + apiKey)
             //traigo el título y lo corto en 4 palabras
             titulo = data.data.title.split(" ", 4);
             //uno el array como string
-            tituloCortado = titulo.join(" ");
+            tituloCortado = titulo.join("");
             //inserto el titulo Cortado
             nombre1.innerHTML = `<p id="tituloGif1">#${tituloCortado}</>`
         }
@@ -73,7 +73,7 @@ fetch(url + "&api_key=" + apiKey)
             //traigo el título y lo corto en 4 palabras
             titulo = data.data.title.split(" ", 4);
             //uno el array como string
-            tituloCortado = titulo.join(" ");
+            tituloCortado = titulo.join("");
             //inserto el titulo Cortado
             nombre2.innerHTML = `<p id="tituloGif2">#${tituloCortado}</>`
         }
@@ -99,7 +99,7 @@ fetch(url + "&api_key=" + apiKey)
             //traigo el título y lo corto en 4 palabras
             titulo = data.data.title.split(" ", 4);
             //uno el array como string
-            tituloCortado = titulo.join(" ");
+            tituloCortado = titulo.join("");
             //inserto el titulo Cortado
             nombre3.innerHTML = `<p id="tituloGif3">#${tituloCortado}</>`
         }
