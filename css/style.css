@@ -437,7 +437,7 @@ html {
     columns: 4;
     column-gap: 1rem;
     padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
 }
 
 #random0 img,
@@ -448,7 +448,7 @@ html {
     height: 280px;
 }
 
-.btn-suge a {
+.btn a {
     color: var(--color-bm);
 }
 
@@ -460,8 +460,19 @@ html {
     box-shadow: inset -2px -2px 0 0 #2124B3,
         inset 2px 2px 0 0 #FFFFFF;
     position: relative;
-    left: -289px;
+    left: 10px;
     top: -46px;
 }
+
+.btn-close {
+    margin-right: 10px;
+}
+
+.box-min {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    width: 283px;
+}
+
 
 /*---------------------------------------------*/

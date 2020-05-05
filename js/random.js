@@ -11,13 +11,18 @@ fetch(url + "&api_key=" + apiKey)
 
         //# del gif
         let nombre0 = document.getElementById('tituloGif0');
-        if (data.data.title === '') {
+        if (data.data.title === '' || data.data.title === ' ') {
+            //Si no tiene título le agrego uno
             nombre0.innerHTML = `<p id="tituloGif0">#GIF by Giphy<p>`
 
         } else {
-            nombre0.innerHTML = `<p id="tituloGif0">#${data.data.title}</>`
+            //traigo el título y lo corto en 4 palabras
+            titulo = data.data.title.split(" ", 4);
+            //uno el array como string
+            tituloCortado = titulo.join(" ");
+            //inserto el titulo Cortado
+            nombre0.innerHTML = `<p id="tituloGif0">#${tituloCortado}</>`
         }
-        //console.log(data)
 
     })
     .catch(err => console.log(err))
@@ -33,13 +38,18 @@ fetch(url + "&api_key=" + apiKey)
 
         //# del gif
         let nombre1 = document.getElementById('tituloGif1');
-        if (data.data.title === '') {
+        if (data.data.title === '' || data.data.title === ' ') {
+            //Si no tiene título le agrego uno
             nombre1.innerHTML = `<p id="tituloGif1">#GIF by Giphy<p>`
 
         } else {
-            nombre1.innerHTML = `<p id="tituloGif1">#${data.data.title}</>`
+            //traigo el título y lo corto en 4 palabras
+            titulo = data.data.title.split(" ", 4);
+            //uno el array como string
+            tituloCortado = titulo.join(" ");
+            //inserto el titulo Cortado
+            nombre1.innerHTML = `<p id="tituloGif1">#${tituloCortado}</>`
         }
-        //console.log(data)
 
     })
     .catch(err => console.log(err))
@@ -55,17 +65,21 @@ fetch(url + "&api_key=" + apiKey)
 
         //# del gif
         let nombre2 = document.getElementById('tituloGif2');
-        if (data.data.title === '') {
+        if (data.data.title === '' || data.data.title === ' ') {
+            //Si no tiene título le agrego uno
             nombre2.innerHTML = `<p id="tituloGif2">#GIF by Giphy<p>`
 
         } else {
-            nombre2.innerHTML = `<p id="tituloGif2">#${data.data.title}</>`
+            //traigo el título y lo corto en 4 palabras
+            titulo = data.data.title.split(" ", 4);
+            //uno el array como string
+            tituloCortado = titulo.join(" ");
+            //inserto el titulo Cortado
+            nombre2.innerHTML = `<p id="tituloGif2">#${tituloCortado}</>`
         }
-        //console.log(data)
 
     })
     .catch(err => console.log(err))
-
 
 
 fetch(url + "&api_key=" + apiKey)
@@ -77,14 +91,18 @@ fetch(url + "&api_key=" + apiKey)
 
         //# del gif
         let nombre3 = document.getElementById('tituloGif3');
-        if (data.data.title === '') {
-            nombre3.innerHTML = `<p id="tituloGif3">#GIF by Giphy<p>`
+        if (data.data.title === '' || data.data.title === ' ') {
+            //Si no tiene título le agrego uno
+            nombre3.innerHTML = `<p id="tituloGif3" >#GIF by Giphy<p>`
 
         } else {
-            nombre3.innerHTML = `<p id="tituloGif3">#
-            ${data.data.title}</>`
+            //traigo el título y lo corto en 4 palabras
+            titulo = data.data.title.split(" ", 4);
+            //uno el array como string
+            tituloCortado = titulo.join(" ");
+            //inserto el titulo Cortado
+            nombre3.innerHTML = `<p id="tituloGif3">#${tituloCortado}</>`
         }
-        //console.log(data)
 
     })
     .catch(err => console.log(err))
