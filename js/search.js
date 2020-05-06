@@ -1,75 +1,92 @@
 //Buscador de Gif
-const searchForm = document.getElementById('search-form')
-const searchInput = document.getElementById('search-input')
-const resultEl = document.getElementById('results')
+const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('search-input');
+const resultEl = document.getElementById('results');
+const resultados = document.getElementById('sugerencias');
+const resultado1 = document.getElementById('sugerencia1');
+const resultado2 = document.getElementById('sugerencia2');
+const resultado3 = document.getElementById('sugerencia3');
 
 searchForm.addEventListener('submit', function (e) {
-    e.preventDefault()
-    const q = searchInput.value
-    search(q)
+  e.preventDefault();
+  const q = searchInput.value;
+  search(q);
 });
 
 async function search(q) {
-    const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC'
-    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`
+  const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
+  const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
 
-    // Busqueda
-    //https://api.giphy.com/v1/gifs/search?api_key=mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx&q=cats
+  // Busqueda
+  //https://api.giphy.com/v1/gifs/search?api_key=mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx&q=cats
 
-    await fetch(path).then((res) => res.json())
-        .then(function (json) {
-            //console.log(json.data[0].images.fixed_width.url)
-            let resultsHTML = ''
+  await fetch(path)
+    .then((res) => res.json())
+    .then(function (json) {
+      //console.log(json.data[0].images.fixed_width.url)
+      let resultsHTML = '';
 
-            json.data.forEach(function (obj) {
-                const url = obj.images.fixed_width.url
-                const width = obj.images.fixed_width.width
-                const height = obj.images.fixed_width.height
-                const title = obj.title
+      json.data.forEach(function (obj) {
+        const url = obj.images.fixed_width.url;
+        const width = obj.images.fixed_width.width;
+        const height = obj.images.fixed_width.height;
+        const title = obj.title;
 
-
-                resultsHTML += `<img 
+        resultsHTML += `<img 
             class="item"
             src="${url}" 
             width="${width}" 
             height="${height}"
-            alt="${title}">`
-            });
+            alt="${title}">`;
+      });
 
-            resultEl.innerHTML = resultsHTML
-        }).catch(function (err) {
-            console.log(err.message)
-        });
-
+      resultEl.innerHTML = resultsHTML;
+    })
+    .catch(function (err) {
+      console.log(err.message);
+    });
 }
 
-/* searchForm.addEventListener('keypress', function (e) {
-    e.preventDefault();
-    const input = searchInput.value;
+function upDateImput(input) {
+  autocomplete(input)
+    .then((data) => data.data)
+    .then((obj) => {
+      sug1 = document.getElementById('sugerencia1');
+      sug1.textContent = obj[0].name;
 
-    console.log(input)
-});
- */
+      sug2 = document.getElementById('sugerencia2');
+      sug2.textContent = obj[1].name;
 
+      sug3 = document.getElementById('sugerencia3');
+      sug3.textContent = obj[2].name;
+    });
 
-
-
+  //console.log(input);
+}
 
 const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
-const input = searchInput.value;
+const input = searchForm.addEventListener('input', function (e) {
+  e.preventDefault();
+  const input = searchInput.value;
+  //autocomplete(input);
+  upDateImput(input);
+  //console.log(input);
+});
 
-fetch(`https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`)
-    .then(response => response.json())
-    .then(data => {
-        //console.log(data.data[1].name);
+async function autocomplete(input) {
+  const reload = await fetch(
+    `https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
+  return reload;
+}
 
-        sug1 = document.getElementById('sugerencias');
-        sug1.innerHTML += `<p id="sugerencia1">${data.data[0].name}</p>`;
-
-        sug2 = document.getElementById('sugerencias');
-        sug2.innerHTML += `<p id="sugerencia2">${data.data[1].name}</p>`;
-
-        sug3 = document.getElementById('sugerencias');
-        sug3.innerHTML += `<p id="sugerencia3">${data.data[2].name}</p>`;
-
-    })
+/* const boton1 = resultado1.addEventListener('click', function (e) {
+  e.preventDefault();
+  const boton1 = resultado1.value;
+  console.log(boton1);
+});
+ */
