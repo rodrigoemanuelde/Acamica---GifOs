@@ -1,11 +1,12 @@
 //Buscador de Gif
+const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const resultEl = document.getElementById('results');
-const resultados = document.getElementById('sugerencias');
-const resultado1 = document.getElementById('sugerencia1');
-const resultado2 = document.getElementById('sugerencia2');
-const resultado3 = document.getElementById('sugerencia3');
+const sug1 = document.getElementById('sugerencia1');
+const sug2 = document.getElementById('sugerencia2');
+const sug3 = document.getElementById('sugerencia3');
+const mostrarMenu = document.getElementById('sugerencias');
 
 searchForm.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -14,11 +15,7 @@ searchForm.addEventListener('submit', function (e) {
 });
 
 async function search(q) {
-  const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
   const path = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
-
-  // Busqueda
-  //https://api.giphy.com/v1/gifs/search?api_key=mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx&q=cats
 
   await fetch(path)
     .then((res) => res.json())
@@ -51,20 +48,12 @@ function upDateImput(input) {
   autocomplete(input)
     .then((data) => data.data)
     .then((obj) => {
-      sug1 = document.getElementById('sugerencia1');
       sug1.textContent = obj[0].name;
-
-      sug2 = document.getElementById('sugerencia2');
       sug2.textContent = obj[1].name;
-
-      sug3 = document.getElementById('sugerencia3');
       sug3.textContent = obj[2].name;
     });
-
-  //console.log(input);
 }
 
-const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
 const input = searchForm.addEventListener('input', function (e) {
   e.preventDefault();
   const input = searchInput.value;
@@ -84,9 +73,9 @@ async function autocomplete(input) {
   return reload;
 }
 
-/* const boton1 = resultado1.addEventListener('click', function (e) {
+const mostrar = sug1.addEventListener('click', function (e) {
   e.preventDefault();
-  const boton1 = resultado1.value;
-  console.log(boton1);
+
+  const valor1 = sug1.value;
+  console.log(valor1);
 });
- */
