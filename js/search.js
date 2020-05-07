@@ -60,12 +60,18 @@ const input = searchForm.addEventListener('input', function (e) {
   //autocomplete(input);
   upDateImput(input);
   //console.log(input);
+  if (input !== '') {
+    mostrarMenu.style.display = 'block';
+  }
+  /* else {
+     mostrarMenu.style.display = 'block';
+   }; */
 });
 
 async function autocomplete(input) {
   const reload = await fetch(
-    `https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`
-  )
+      `https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`
+    )
     .then((response) => response.json())
     .then((data) => {
       return data;
@@ -73,9 +79,23 @@ async function autocomplete(input) {
   return reload;
 }
 
-const mostrar = sug1.addEventListener('click', function (e) {
+const mostrar1 = sug1.addEventListener('click', function (e) {
   e.preventDefault();
+  const valor1 = sug1.textContent;
+  search(valor1);
+  mostrarMenu.style.display = 'none';
+});
 
-  const valor1 = sug1.value;
-  console.log(valor1);
+const mostrar2 = sug2.addEventListener('click', function (e) {
+  e.preventDefault();
+  const valor2 = sug2.textContent;
+  search(valor2);
+  mostrarMenu.style.display = 'none';
+});
+
+const mostrar3 = sug3.addEventListener('click', function (e) {
+  e.preventDefault();
+  const valor3 = sug3.textContent;
+  search(valor3);
+  mostrarMenu.style.display = 'none';
 });

@@ -501,7 +501,7 @@ html {
     margin-left: 172px;
     padding: 0.21rem;
     position: absolute;
-    /* display: none; */
+    display: none;
 }
 
 .sugerencias p {
@@ -519,6 +519,7 @@ html {
     display: flex;
     align-items: center;
     padding-left: 10px;
+    cursor: pointer;
 }
 
 .sugerencias p:hover {
