@@ -24,6 +24,7 @@ const input = searchForm.addEventListener('input', function (e) {
 searchForm.addEventListener('submit', function (e) {
   e.preventDefault();
   const q = searchInput.value;
+  searchInput.value = '';
   search(q);
   mostrarMenu.style.display = 'none';
 });
@@ -32,6 +33,7 @@ searchForm.addEventListener('submit', function (e) {
 const mostrar1 = sug1.addEventListener('click', function (e) {
   e.preventDefault();
   const valor1 = sug1.textContent;
+  searchInput.value = '';
   search(valor1);
   mostrarMenu.style.display = 'none';
 });
@@ -40,6 +42,7 @@ const mostrar1 = sug1.addEventListener('click', function (e) {
 const mostrar2 = sug2.addEventListener('click', function (e) {
   e.preventDefault();
   const valor2 = sug2.textContent;
+  searchInput.value = '';
   search(valor2);
   mostrarMenu.style.display = 'none';
 });
@@ -48,6 +51,7 @@ const mostrar2 = sug2.addEventListener('click', function (e) {
 const mostrar3 = sug3.addEventListener('click', function (e) {
   e.preventDefault();
   const valor3 = sug3.textContent;
+  searchInput.value = '';
   search(valor3);
   mostrarMenu.style.display = 'none';
 });
