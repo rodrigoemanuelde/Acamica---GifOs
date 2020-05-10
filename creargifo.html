@@ -7,6 +7,7 @@
     <title>Crear Gifo</title>
     <link rel="stylesheet" href="css/style.css" />
     <link id="favicon" rel="icon" type="image/png" href="" />
+    <script type="text/javascript" async="" src="https://webrtcexperiment.disqus.com/embed.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
     <main>
 
         <div class="barra">Crear Guifos</div>
-        <div class="cuadro">
+        <div class="cuadroPrimero">
             <div class="texto">
                 <h3>Aquí podrás crear tus propios guifos</h3>
                 <p>CreCrear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados.
@@ -38,10 +39,24 @@
                     <li>4) Listo para subir y compartir!</li>
                     <li>¿Quieres comenzar a crear tu guifo ahora?</li>
                 </ul>
-                <button>Cancelar</button>
-                <button>Comenzar</button>
+                <button id="cancelarPrimero">Cancelar</button>
+                <button id="comenzarPrimero">Comenzar</button>
             </div>
         </div>
+        <section cz-shortcut-listen="true">
+            <title>Gif Recording | RecordRTC</title>
+            <h1>Simple Gif Recording using RecordRTC</h1>
+
+            <br />
+
+            <button id="btn-start-recording">Start Recording</button>
+            <button id="btn-stop-recording" disabled>Stop Recording</button>
+
+            <hr />
+            <img id="video" />
+
+
+        </section>
     </main>
     <footer>
         <section class="barra-footer">
@@ -54,6 +69,13 @@
     <script src="js/theme.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/page.js"></script>
+    <!--Script de captura de video-->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>
+
+    <script src="js/capturarGif.js"></script>
+
+    <script src="https://www.webrtc-experiment.com/common.js"></script>
 </body>
 
 </html>
