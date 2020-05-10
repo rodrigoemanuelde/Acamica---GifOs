@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Gifo</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleCaptura.css">
+    <link id="favicon" rel="icon" type="image/png" href="#" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet" />
     <link id="favicon" rel="icon" type="image/png" href="" />
     <script type="text/javascript" async="" src="https://webrtcexperiment.disqus.com/embed.js"></script>
 </head>
@@ -21,28 +24,32 @@
     </header>
 
     <nav class="nav">
+        <img id="back" src="img/arrow.svg" alt="back page">
         <img id="logo" src="img/gifOF_logo.png" alt="logo GifOf" />
     </nav>
     <main>
-
-        <div class="barra">Crear Guifos</div>
-        <div class="cuadroPrimero">
-            <div class="texto">
-                <h3>Aquí podrás crear tus propios guifos</h3>
-                <p>CreCrear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados.
-                </p>
-                <ul>
-                    <li> Los pasos para crear tu guifo son:</li>
-                    <li>1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
-                    <li>2) Capturar tu momento guifo</li>
-                    <li>3) Revisar el momento</li>
-                    <li>4) Listo para subir y compartir!</li>
-                    <li>¿Quieres comenzar a crear tu guifo ahora?</li>
-                </ul>
-                <button id="cancelarPrimero">Cancelar</button>
-                <button id="comenzarPrimero">Comenzar</button>
+        <section>
+            <div class="barra">Crear Guifos</div>
+            <div class="cuadroPrimero">
+                <div class="texto">
+                    <h3>Aquí podrás crear tus propios guifos</h3>
+                    <p>CreCrear tu guifo es muy fácil, graba cualquier imagen con tu cámara y obtén guifos
+                        personalizados.
+                    </p>
+                    <ul>
+                        <li> Los pasos para crear tu guifo son:</li>
+                        <li>1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>
+                        <li>2) Capturar tu momento guifo</li>
+                        <li>3) Revisar el momento</li>
+                        <li>4) Listo para subir y compartir!</li>
+                        <li>¿Quieres comenzar a crear tu guifo ahora?</li>
+                    </ul>
+                    <button id="cancelarPrimero">Cancelar</button>
+                    <button id="comenzarPrimero">Comenzar</button>
+                </div>
             </div>
-        </div>
+        </section>
+
         <section cz-shortcut-listen="true">
             <title>Gif Recording | RecordRTC</title>
             <h1>Simple Gif Recording using RecordRTC</h1>

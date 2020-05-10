@@ -1,3 +1,7 @@
+export {
+  search
+};
+
 //Constantes ------------------------------------------------------------------
 const apikey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
 const searchForm = document.getElementById('search-form');
@@ -92,8 +96,8 @@ async function search(q) {
 //buscador de sugerencias por ingreso de texto en barra de búsqueda
 async function autocomplete(input) {
   const reload = await fetch(
-    `https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`
-  )
+      `https://api.giphy.com/v1/gifs/search/tags?q=${input}&api_key=${apikey}&limit=3`
+    )
     .then((response) => response.json())
     .then((data) => {
       return data;
