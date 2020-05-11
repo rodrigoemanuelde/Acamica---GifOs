@@ -1,41 +1,33 @@
-// Dropdown cambio de color
-
 // Despliega los botones de Sailor Day & Sailor Night
-/* function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-} */
 
-// Cierra el menú cuando el usuario hace click fuera del botón de "Elegir Tema".
-/* window.onclick = function (event) {
-    if (!event.target.matches("#dropbtn") && !event.target.matches("#arrow")) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-                openDropdown.classList.remove("show");
-            }
-        }
-    }
-}; */
+//constantes
+const dropdownPrincipal = document.getElementById('dropbtn');
+const dropdownSecundario = document.getElementById('myDropdown');
+const day = document.getElementById('day');
+const night = document.getElementById('night');
 
-
-// Despliega los botones de Sailor Day & Sailor Night
-const dropdown2 = document.getElementById('myDropdown')
-
-// Cierra el menú cuando el usuario hace click fuera del botón de "Elegir Tema".
-
-dropdown2.addEventListener('click', (e) => {
+//Desplegar day & night
+dropdownPrincipal.addEventListener('click', (e) => {
     e.preventDefault();
-    const show = dropdown2.classList.toggle("show");
-    if (!e.target.matches("#dropbtn") && !e.target.matches("#arrow")) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        let i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-                openDropdown.classList.remove("show");
-            }
-        }
+    if (dropdownSecundario.style.display == "none") {
+        dropdownSecundario.style.display = "block";
+    } else if (dropdownSecundario.style.display = "block") {
+        dropdownSecundario.style.display = "none"
+    }
+})
+
+//Cerrar al presionar day
+day.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (dropdownSecundario.style.display == "block") {
+        dropdownSecundario.style.display = "none";
+    }
+})
+
+//Cerrar al presionar Night
+night.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (dropdownSecundario.style.display == "block") {
+        dropdownSecundario.style.display = "none";
     }
 })
