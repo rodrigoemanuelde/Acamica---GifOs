@@ -172,6 +172,53 @@ html {
     padding-top: 3rem;
 }
 
+.botonesresultados {
+    width: calc(280px * 4 + 3rem);
+    margin: 20px auto 20px auto;
+    display: none;
+}
+
+.btnizq {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button1resultados,
+.button2resultados,
+.button3resultados {
+    font-family: var(--font-family);
+    background: #4180F6;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #284F99,
+        inset 2px 2px 0 0 #FFFFFF;
+    color: var(--color-bm);
+    padding: 8px 7px;
+    text-align: center;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.resultados {
+    display: none;
+    background: #FFFAFE;
+    border: 1px solid #E6BBE2;
+    box-shadow: inset -2px -2px 0 0 #E6DCE4,
+        inset 2px 2px 0 0 #80687D;
+    width: calc(280px * 4 + 3rem);
+    height: 32px;
+    margin-top: 44px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resultados p {
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    padding: 7px;
+}
+
 .item {
     margin-bottom: 1em;
 }
