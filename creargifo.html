@@ -28,6 +28,23 @@
         <img id="logo" src="img/gifOF_logo.png" alt="logo GifOf" />
     </nav>
     <main>
+        <div class="dropdowncapturar">
+            <button class="dropbtn" id="dropbtn">
+                Elegir tema
+                <span></span>
+                <img alt="flecha abajo menu" id="arrow" />
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <ul>
+                    <li class="day" id="day">
+                        <a href="#home">Sailor Day</a>
+                    </li>
+                    <li class="night" id="night" class="night">
+                        <a href="#about">Sailor Night</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <section>
             <div class="barra">Crear Guifos</div>
             <div class="cuadroPrimero">
@@ -74,8 +91,6 @@
     </footer>
     <script src="js/contador.js"></script>
     <script src="js/theme.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/page.js"></script>
     <!--Script de captura de video-->
     <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
     <script src="https://www.webrtc-experiment.com/gif-recorder.js"></script>

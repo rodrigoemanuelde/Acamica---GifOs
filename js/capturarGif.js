@@ -28,7 +28,7 @@ function stopRecordingCallback() {
     recorder = null;
 }
 
-const recorder; // globally accessible
+let recorder; // globally accessible
 
 btnGrabar.addEventListener('click', () => {
     btnGrabar.disabled = true;
