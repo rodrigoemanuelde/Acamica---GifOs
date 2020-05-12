@@ -3,7 +3,21 @@ const btnGrabar = document.getElementById('btn-start-recording');
 const btnParar = document.getElementById('btn-stop-recording');
 const btnComenzarPimero = document.getElementById('comenzarPrimero');
 const btnCancelarPrimero = document.getElementById('cancelarPrimero');
+const back1 = document.getElementById('back');
+const back2 = document.getElementById('logo');
 
+//--------------------------------------------------------------
+//Regresar a la página index
+back1.addEventListener('click', () => {
+    location.assign('..//index.html');
+});
+
+back2.addEventListener('click', () => {
+    location.assign('..//index.html');
+});
+
+//-------------------------------------------------------------
+//Capturar el video 
 
 function captureCamera(callback) {
     navigator.mediaDevices
@@ -21,6 +35,8 @@ function captureCamera(callback) {
         });
 }
 
+
+
 function stopRecordingCallback() {
     image.src = URL.createObjectURL(recorder.getBlob());
     recorder.camera.stop();
@@ -33,18 +49,18 @@ let recorder; // globally accessible
 btnGrabar.addEventListener('click', () => {
     btnGrabar.disabled = true;
     captureCamera(function (camera) {
-        document.querySelector('h1').innerHTML =
-            'Waiting for Gif Recorder to start...';
+        /* document.querySelector('h1').innerHTML =
+            'Waiting for Gif Recorder to start...'; */
         recorder = RecordRTC(camera, {
             type: 'gif',
             frameRate: 1,
             quality: 10,
-            width: 360,
-            hidden: 240,
-            onGifRecordingStarted: () => {
+            width: 720,
+            hidden: 560,
+            /* onGifRecordingStarted: () => {
                 document.querySelector('h1').innerHTML =
                     'Gif recording started.';
-            },
+            }, */
             onGifPreview: function (gifURL) {
                 image.src = gifURL;
             },
@@ -57,10 +73,23 @@ btnGrabar.addEventListener('click', () => {
 
         btnParar.disabled = false;
     });
-})
-
+});
 
 btnParar.addEventListener('click', () => {
     btnParar.disabled = true;
     recorder.stopRecording(stopRecordingCallback);
-})
+});
+
+//Activar la cámara 
+/* const video = document.getElementById('videoPrevio');
+
+function videoPrevio() {
+    navigator.getUserMedia({
+            video: {}
+        },
+        stream => video.srcObject = stream,
+        err => console.error(err)
+    )
+}
+
+videoPrevio() */

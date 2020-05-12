@@ -1,5 +1,260 @@
+:root {
+
+    /*Font family*/
+    --font-family: 'Chakra Petch',
+        sans-serif;
+
+    /* Fondo de página -fondo*/
+    --bgn-fondo: #fff4fd;
+
+    /* Background lineal superior -sp*/
+    --bg-linea-sp: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+
+    /*Barra superior -bs*/
+    --box-shadow-bs: 0 1px 0 0 #110038;
+    --font-sz-bs: 12px;
+    --color-bs: #ffffff;
+    --let-sp-bs: 0;
+
+    /*Boton menu -bm*/
+
+    --bgn-bm: #f7c9f3;
+    --border-bm: 1px solid #110038;
+    --box-shadow-bm: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+    --color-bm: #110038;
+
+    /* Barra buscador -bb*/
+    --bg-bb: #e6e6e6;
+    --box-shadow-bb: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+
+    /* Botón dropdown*/
+    --dropdown-btn1: #fff4fd;
+    --dropdown-btn2: #F0F0F0;
+
+    --font-color1: #110038;
+    --font-color2: #110038;
+
+    /* Box random*/
+    --bgn-btn: #4180F6;
+}
+
+[dataTheme="dark"] {
+
+    /*Font family*/
+    --font-family: 'Chakra Petch',
+        sans-serif;
+
+    /* Color de fondo*/
+
+    --bgn-fondo: #110038;
+
+    /* Background lineal superior -sp*/
+    --bg-linea-sp: linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%);
+
+    /*Barra superior*/
+    --box-shadow-bs: 0 1px 0 0 #110038;
+    --font-sz-bs: 12px;
+    --color-bs: #ffffff;
+    --let-sp-bs: 0;
+
+    /*Boton menu*/
+
+    --bgn-bm: #ee3efe;
+    --border-bm: 1px solid #110038;
+    --box-shadow-bm: inset -1px -1px 0 0 #a72cb3, inset 1px 1px 0 0 #ffffff;
+    --color-bm: #ffffff;
+
+    /* Barra buscador */
+
+    /* Botón dropdown*/
+    --dropdown-btn1: #CCCCCC;
+    --dropdown-btn2: #2E32FB;
+
+    --font-color1: #110038;
+    --font-color2: #FFFFFF;
+
+    /* Box random*/
+    --bgn-btn: #2E32FB;
+}
+
+/* ----------------------------------------------- */
+
 /*----- Botón de cambio de color oculto*/
 
 .dropdowncapturar {
     display: none;
+}
+
+/* Barra contadora de visitas*/
+.barra-contador {
+    background-image: var(--bg-linea-sp);
+    box-shadow: var(--box-shadow-bs);
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    color: var(--color-bs);
+    letter-spacing: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    z-index: 2;
+}
+
+/*Barra del footer*/
+.barra-footer {
+    background-image: var(--bg-linea-sp);
+    box-shadow: var(--box-shadow-bs);
+    font-family: var(--font-family);
+    font-size: 0.75rem;
+    color: var(--color-bs);
+    letter-spacing: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+/* Iconos para volver al inicio*/
+.nav-crear {
+    display: flex;
+    margin-top: 35px;
+    margin-left: 60px;
+}
+
+.nav-crear #logo {
+    margin-left: 10px;
+}
+
+/* Primera Venta de Captura de Gif*/
+.barra-larga {
+    width: 678px;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: var(--bg-linea-sp);
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: var(--color-bs);
+    letter-spacing: 0;
+}
+
+.barra-larga h3 {
+    padding: 0.21rem;
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+
+.crear-gifo {
+    width: 684px;
+    margin: 75px auto 40px auto;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4,
+        inset 2px 2px 0 0 #FFFFFF;
+    padding: 2px;
+
+}
+
+.titulo-icono {
+    display: flex;
+    margin-left: 25px;
+    padding-top: 30px;
+}
+
+.titulo-icono h3 {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 22px;
+    padding-left: 16px;
+}
+
+.texto-interno {
+    padding: 7px 93px 0px 73px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: #110038;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.texto-interno span {
+    font-weight: 700;
+}
+
+.botonesPrimero {
+    display: flex;
+    justify-content: flex-end;
+    padding: 28px 36px 36px 0px;
+}
+
+#cancelarPrimero {
+    background: #FFF4FD;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97,
+        inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+    width: 144px;
+    height: 36px;
+    margin-right: 16px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+#comenzarPrimero {
+    background: #F7C9F3;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #997D97,
+        inset 1px 1px 0 0 #FFFFFF;
+    cursor: pointer;
+    width: 144px;
+    height: 36px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #110038;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
+}
+
+/* Segunda Ventana de Captura de Gif*/
+
+#capturarGifo {
+    width: 860px;
+    height: 548px;
+    margin: 75px auto 40px auto;
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4,
+        inset 2px 2px 0 0 #FFFFFF;
+    padding: 4px;
+}
+
+.barraSegunda {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    height: 24px;
+}
+
+.barraSegunda p {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    align-content: center;
+    padding-left: 4px;
+}
+
+.barraSegunda img {
+    padding-right: 7px;
 }
