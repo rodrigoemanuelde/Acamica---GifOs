@@ -36,6 +36,8 @@
 
     /* Box random*/
     --bgn-btn: #4180F6;
+
+
 }
 
 [dataTheme="dark"] {
@@ -75,6 +77,7 @@
 
     /* Box random*/
     --bgn-btn: #2E32FB;
+
 }
 
 /* ----------------------------------------------- */
@@ -306,6 +309,21 @@
     margin-right: 16px;
 }
 
+.derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.grabar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stop {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .botonCapturar {
     width: 144px;
     height: 36px;
@@ -334,4 +352,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#hms {
+    width: 124px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #E6E6E6,
+        inset 2px 2px 0 0 #000000;
+}
+
+.botonGrabar {
+    background: #FF6161;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #993A3A,
+        inset 1px 1px 0 0 #FFFFFF;
+    width: 144px;
+    height: 36px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 18px;
 }

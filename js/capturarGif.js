@@ -1,13 +1,21 @@
+//video
 const image = document.getElementById('video');
 const video = document.getElementById('videoPrevio');
+//botones de grabación
 const btnGrabar = document.getElementById('btn-start-recording');
 const btnParar = document.getElementById('btn-stop-recording');
+//comenzar grabación
 const btnComenzarPimero = document.getElementById('comenzarPrimero');
+//Finalizar grabación
 const btnCancelarPrimero = document.getElementById('cancelarPrimero');
+//volver a la pantalla anterior
 const back1 = document.getElementById('back');
 const back2 = document.getElementById('logo');
+//Pirmer menú
 const caja1 = document.getElementById('crearGifo');
+//Segundo menú
 const cuadroSegundo = document.getElementById('capturarGifo');
+//calidad de imágen previa
 const constraints = {
   audio: false,
   video: {
@@ -15,6 +23,12 @@ const constraints = {
     height: 570
   }
 };
+//cerrar segundo menú
+const cerrar = document.getElementById('closeButton');
+
+//botones de Capturar y de Grabar
+const grabar = document.getElementById('grabar');
+const stopGrabar = document.getElementById('stop');
 
 
 //--------------------------------------------------------------
@@ -30,8 +44,6 @@ back2.addEventListener('click', () => {
 btnCancelarPrimero.addEventListener('click', () => {
   location.assign('..//index.html');
 });
-
-
 
 
 //-------------------------------------------------------------
@@ -60,9 +72,13 @@ function stopRecordingCallback() {
   recorder = null;
 }
 
-let recorder; // globally accessible
+let recorder;
 
 btnGrabar.addEventListener('click', () => {
+  //Oculto los botones de comenzar a grabar
+  grabar.style.display = 'none';
+  //mostrar los botones de stop
+  stopGrabar.style.display = 'inline-flex';
   //cerrar el video
   stream = video.srcObject;
   tracks = stream.getTracks();
@@ -103,6 +119,8 @@ btnParar.addEventListener('click', () => {
 //Activar la cámara
 
 btnComenzarPimero.addEventListener('click', () => {
+  //oculto la botonera de grabación
+  stopGrabar.style.display = 'none';
   // oculto la captura de video
   image.style.display = 'none';
   //Oculto la sección de Inicio
@@ -123,7 +141,7 @@ btnComenzarPimero.addEventListener('click', () => {
 
 
 //Para volver al inicio
-const cerrar = document.getElementById('closeButton');
+
 cerrar.addEventListener('click', (e) => {
   e.preventDefault()
   cuadroSegundo.style.display = 'none'

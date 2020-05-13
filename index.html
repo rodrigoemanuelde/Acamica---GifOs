@@ -1,213 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>GifOs</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link id="favicon" rel="icon" type="image/png" href="#" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="barra-contador">
-        <p>
-          ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
-          están.////// Número de visitas: <span id="contador"></span>
-        </p>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GifOs</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link id="favicon" rel="icon" type="image/png" href="#" />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet" />
+</head>
 
-    <nav class="nav">
-      <img id="logo" src="#" alt="logo GifOf" />
-      <div class="botones">
-        <button class="crear" id="crear">
-          Crear Gifo
+<body>
+  <header>
+    <div class="barra-contador">
+      <p>
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+        están.////// Número de visitas: <span id="contador"></span>
+      </p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <img id="logo" src="#" alt="logo GifOf" />
+    <div class="botones">
+      <button class="crear" id="crear">
+        Crear Gifo
+      </button>
+
+      <div class="dropdown">
+        <button class="dropbtn" id="dropbtn">
+          Elegir tema
+          <span></span>
+          <img alt="flecha abajo menu" id="arrow" />
         </button>
-
-        <div class="dropdown">
-          <button class="dropbtn" id="dropbtn">
-            Elegir tema
-            <span></span>
-            <img alt="flecha abajo menu" id="arrow" />
-          </button>
-          <div id="myDropdown" class="dropdown-content">
-            <ul>
-              <li class="day" id="day">
-                <a href="#home">Sailor Day</a>
-              </li>
-              <li class="night" id="night" class="night">
-                <a href="#about">Sailor Night</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <a href="#" class="mis" id="misGif">
-          <span class="m">M</span>is gifos</a
-        >
-      </div>
-    </nav>
-    <!--- Barra de búsqueda--->
-    <main>
-      <section class="barra-busqueda">
-        <div class="barra-larga">
-          <h3>Buscar</h3>
-        </div>
-        <div class="container">
-          <busqueda>
-            <form id="search-form">
-              <input
-                id="search-input"
-                type="text"
-                placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-                required
-                autocomplete="off"
-              />
-              <button type="submit">
-                <img src="img/lupa_inactive.svg" alt="lupa" /> Search
-              </button>
-            </form>
-          </busqueda>
-        </div>
-      </section>
-      <section id="sugerencias" class="sugerencias">
-        <p id="sugerencia1"></p>
-        <p id="sugerencia2"></p>
-        <p id="sugerencia3"></p>
-      </section>
-      <div id="botonesresultados" class="botonesresultados">
-        <div class="btnizq">
-          <button class="button1resultados" id="button1resultados">
-            sugerencia 1
-          </button>
-          <button class="button2resultados" id="button2resultados">
-            sugerencia 2
-          </button>
-          <button class="button2resultados" id="button3resultados">
-            Sugerencia 3
-          </button>
+        <div id="myDropdown" class="dropdown-content">
+          <ul>
+            <li class="day" id="day">
+              <a href="#home">Sailor Day</a>
+            </li>
+            <li class="night" id="night" class="night">
+              <a href="#about">Sailor Night</a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="resultados" id="resultados">
-        <p id="nombreResultado">Ejemplo de búsqueda (resultados)</p>
+      <a href="#" class="mis" id="misGif">
+        <span class="m">M</span>is gifos</a>
+    </div>
+  </nav>
+  <!--- Barra de búsqueda--->
+  <main>
+    <section class="barra-busqueda">
+      <div class="barra-larga">
+        <h3>Buscar</h3>
       </div>
-      <div id="results" class="results">
-        <!--- Insertar gif de búsqueda--->
-      </div>
-
-      <!-- Gif Random x4 -->
-      <section class="ranDom">
-        <div class="tendencias">
-          <p>Hoy te sugerimos:</p>
-        </div>
-        <div class="imgrandom">
-          <!------------------------------------------------------->
-          <!-- Pimer box -->
-          <div class="box">
-            <div class="box-min">
-              <div class="barra-random">
-                <p id="tituloGif0">#titulo</p>
-                <img
-                  class="btn-close"
-                  src="img/button3.svg"
-                  alt="button-close"
-                />
-              </div>
-              <div id="random0"></div>
-            </div>
-
-            <button id="btn-random0" class="btn">
-              <a href="">ver mas...</a>
+      <div class="container">
+        <busqueda>
+          <form id="search-form">
+            <input id="search-input" type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+              required autocomplete="off" />
+            <button type="submit">
+              <img src="img/lupa_inactive.svg" alt="lupa" /> Search
             </button>
-          </div>
-          <!------------------------------------------------------->
-          <!-- Segundo box -->
-          <div class="box">
-            <div class="box-min">
-              <div class="barra-random">
-                <p id="tituloGif1">#titulo</p>
-                <img
-                  class="btn-close"
-                  src="img/button3.svg"
-                  alt="button-close"
-                />
-              </div>
-              <div id="random1"></div>
-            </div>
-
-            <button id="btn-random1" class="btn">
-              <a href="">ver mas...</a>
-            </button>
-          </div>
-          <!------------------------------------------------------->
-          <!-- Tercer box -->
-          <div class="box">
-            <div class="box-min">
-              <div class="barra-random">
-                <p id="tituloGif2">#titulo</p>
-                <img
-                  class="btn-close"
-                  src="img/button3.svg"
-                  alt="button-close"
-                />
-              </div>
-              <div id="random2"></div>
-            </div>
-
-            <button id="btn-random2" class="btn">
-              <a href="">ver mas...</a>
-            </button>
-          </div>
-          <!------------------------------------------------------->
-          <!-- Cuarto box -->
-          <div class="box">
-            <div class="box-min">
-              <div class="barra-random">
-                <p id="tituloGif3">#titulo</p>
-                <img
-                  class="btn-close"
-                  src="img/button3.svg"
-                  alt="button-close"
-                />
-              </div>
-              <div id="random3"></div>
-            </div>
-            <button id="btn-random3" class="btn">
-              <a href="">ver mas...</a>
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- Sección de tendencias -->
-      <section>
-        <div class="tendencias">
-          <p>Tendencias</p>
-        </div>
-
-        <div id="tend" class="tend"></div>
-        <!-- Imágenes random -->
-      </section>
-    </main>
-    <footer>
-      <div class="barra-footer">
-        <p>
-          ©Copyright 2020 by Rodrigoemanuelde. All rights reversed.
-        </p>
+          </form>
+        </busqueda>
       </div>
-    </footer>
-    <script type="module" src="js/random.js"></script>
-    <script type="module" src="js/tend.js"></script>
-    <script type="module" src="js/search.js"></script>
-    <script type="module" src="js/contador.js"></script>
-    <script type="module" src="js/theme.js"></script>
-    <script type="module" src="js/dropdown.js"></script>
-    <script type="module" src="js/page.js"></script>
-  </body>
+    </section>
+    <section id="sugerencias" class="sugerencias">
+      <p id="sugerencia1"></p>
+      <p id="sugerencia2"></p>
+      <p id="sugerencia3"></p>
+    </section>
+    <div id="botonesresultados" class="botonesresultados">
+      <div class="btnizq">
+        <button class="button1resultados" id="button1resultados">
+          sugerencia 1
+        </button>
+        <button class="button2resultados" id="button2resultados">
+          sugerencia 2
+        </button>
+        <button class="button2resultados" id="button3resultados">
+          Sugerencia 3
+        </button>
+      </div>
+    </div>
+    <div class="resultados" id="resultados">
+      <p id="nombreResultado">Ejemplo de búsqueda (resultados)</p>
+    </div>
+    <div id="results" class="results">
+      <!--- Insertar gif de búsqueda--->
+    </div>
+
+    <!-- Gif Random x4 -->
+    <section class="ranDom">
+      <div class="tendencias">
+        <p>Hoy te sugerimos:</p>
+      </div>
+      <div class="imgrandom">
+        <!------------------------------------------------------->
+        <!-- Pimer box -->
+        <div class="box">
+          <div class="box-min">
+            <div class="barra-random">
+              <p id="tituloGif0">#titulo</p>
+              <img class="btn-close" src="img/button3.svg" alt="button-close" />
+            </div>
+            <div id="random0"></div>
+          </div>
+
+          <button id="btn-random0" class="btn">
+            <a href="">ver mas...</a>
+          </button>
+        </div>
+        <!------------------------------------------------------->
+        <!-- Segundo box -->
+        <div class="box">
+          <div class="box-min">
+            <div class="barra-random">
+              <p id="tituloGif1">#titulo</p>
+              <img class="btn-close" src="img/button3.svg" alt="button-close" />
+            </div>
+            <div id="random1"></div>
+          </div>
+
+          <button id="btn-random1" class="btn">
+            <a href="">ver mas...</a>
+          </button>
+        </div>
+        <!------------------------------------------------------->
+        <!-- Tercer box -->
+        <div class="box">
+          <div class="box-min">
+            <div class="barra-random">
+              <p id="tituloGif2">#titulo</p>
+              <img class="btn-close" src="img/button3.svg" alt="button-close" />
+            </div>
+            <div id="random2"></div>
+          </div>
+
+          <button id="btn-random2" class="btn">
+            <a href="">ver mas...</a>
+          </button>
+        </div>
+        <!------------------------------------------------------->
+        <!-- Cuarto box -->
+        <div class="box">
+          <div class="box-min">
+            <div class="barra-random">
+              <p id="tituloGif3">#titulo</p>
+              <img class="btn-close" src="img/button3.svg" alt="button-close" />
+            </div>
+            <div id="random3"></div>
+          </div>
+          <button id="btn-random3" class="btn">
+            <a href="">ver mas...</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Sección de tendencias -->
+    <section>
+      <div class="tendencias">
+        <p>Tendencias</p>
+      </div>
+
+      <div id="tend" class="tend"></div>
+      <!-- Imágenes random -->
+    </section>
+  </main>
+  <footer>
+    <div class="barra-footer">
+      <p>
+        ©Copyright 2020 by Rodrigoemanuelde. All rights reversed.
+      </p>
+    </div>
+  </footer>
+  <script type="module" src="js/random.js"></script>
+  <script type="module" src="js/tend.js"></script>
+  <script type="module" src="js/search.js"></script>
+  <script type="module" src="js/contador.js"></script>
+  <script type="module" src="js/theme.js"></script>
+  <script type="module" src="js/dropdown.js"></script>
+  <script type="module" src="js/page.js"></script>
+</body>
+
 </html>
