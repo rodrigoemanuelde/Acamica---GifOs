@@ -1,13 +1,21 @@
 const image = document.getElementById('video');
+const video = document.getElementById('videoPrevio');
 const btnGrabar = document.getElementById('btn-start-recording');
 const btnParar = document.getElementById('btn-stop-recording');
 const btnComenzarPimero = document.getElementById('comenzarPrimero');
 const btnCancelarPrimero = document.getElementById('cancelarPrimero');
 const back1 = document.getElementById('back');
 const back2 = document.getElementById('logo');
-const video = document.getElementById('videoPrevio');
 const caja1 = document.getElementById('crearGifo');
-/* const caja2 = document.getElementById('video'); */
+const cuadroSegundo = document.getElementById('capturarGifo');
+const constraints = {
+  audio: false,
+  video: {
+    width: 1100,
+    height: 570
+  }
+};
+
 
 //--------------------------------------------------------------
 //Regresar a la página index
@@ -22,6 +30,9 @@ back2.addEventListener('click', () => {
 btnCancelarPrimero.addEventListener('click', () => {
   location.assign('..//index.html');
 });
+
+
+
 
 //-------------------------------------------------------------
 //Capturar el video
@@ -52,10 +63,18 @@ function stopRecordingCallback() {
 let recorder; // globally accessible
 
 btnGrabar.addEventListener('click', () => {
+  //cerrar el video
+  stream = video.srcObject;
+  tracks = stream.getTracks();
+  tracks.forEach(function (track) {
+    track.stop();
+  });
+  //Elimino del Dom
+  image.style.display = 'block';
+  video.style.display = 'none';
+  //Inicio Grabación
   btnGrabar.disabled = true;
   captureCamera(function (camera) {
-    /* document.querySelector('h1').innerHTML =
-            'Waiting for Gif Recorder to start...'; */
     recorder = RecordRTC(camera, {
       type: 'gif',
       frameRate: 1,
@@ -84,18 +103,29 @@ btnParar.addEventListener('click', () => {
 //Activar la cámara
 
 btnComenzarPimero.addEventListener('click', () => {
+  // oculto la captura de video
+  image.style.display = 'none';
+  //Oculto la sección de Inicio
   caja1.style.display = 'none';
-  function videoPrevio() {
-    navigator.getUserMedia(
-      {
-        video: {},
-      },
-      (stream) => (video.srcObject = stream),
-      (err) => console.error(err)
-    );
-  }
-
-  videoPrevio();
+  cuadroSegundo.style.display = 'block';
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then(function (mediaStream) {
+      video.srcObject = mediaStream;
+      video.onloadedmetadata = function () {
+        video.play();
+      };
+    })
+    .catch(function (err) {
+      console.log(err.name + ': ' + err.message);
+    });
 });
 
 
+//Para volver al inicio
+const cerrar = document.getElementById('closeButton');
+cerrar.addEventListener('click', (e) => {
+  e.preventDefault()
+  cuadroSegundo.style.display = 'none'
+  caja1.style.display = 'block'
+})

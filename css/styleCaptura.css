@@ -208,6 +208,14 @@
     line-height: 18px;
 }
 
+#back {
+    cursor: pointer;
+}
+
+#logo {
+    cursor: pointer;
+}
+
 #comenzarPrimero {
     background: #F7C9F3;
     border: 1px solid #110038;
@@ -234,6 +242,7 @@
     box-shadow: inset -2px -2px 0 0 #B4B4B4,
         inset 2px 2px 0 0 #FFFFFF;
     padding: 4px;
+    display: none;
 }
 
 .barraSegunda {
@@ -277,7 +286,7 @@
 #video {
     width: 832px;
     height: 434px;
-    display: none;
+    /* display: none; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -285,14 +294,14 @@
 #videoPrevio {
     width: 832px;
     height: 434px;
-    display: none;
+    /* display: none; */
     margin-left: auto;
     margin-right: auto;
 }
 
 .espacioBotones {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-top: 24px;
     margin-right: 16px;
 }
@@ -312,6 +321,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .imgCamara {

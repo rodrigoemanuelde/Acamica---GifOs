@@ -49,7 +49,7 @@
             <div class="barra-larga">
                 <h3>Crear Guifos</h3>
             </div>
-            <div class="cuadroPrimero">
+            <div class="cuadroPrimero" id="cuadroPrimero">
                 <div class="texto">
                     <div class="titulo-icono">
                         <img src="img/window img.png" alt="icono de window">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="texto-interno">
                         <p>
-                            CreCrear tu <span>guifo</span> es muy fácil, graba cualquier imagen
+                            Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen
                             con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:
                         </p>
                         <br>
@@ -85,20 +85,39 @@
         <section id="capturarGifo">
             <div class="barraSegunda">
                 <p>Un Chequeo Antes de Empezar</p>
-                <img src="img/button close.svg" alt="botón para cerrar la ventana">
+                <img id="closeButton" src="img/button close.svg" alt="botón para cerrar la ventana">
             </div>
             <div class="espacioVideos">
+                <video id="videoPrevio"></video />
                 <img id="video" />
-                <video id="videoPrevio" autoplay muted></video>
+                
             </div>
             <div class="espacioBotones">
-                <button class="imgCamara"><img src="img/camera.svg" alt="cámara video"></button>
-                <button class="botonCapturar">Capturar</button>
+                
+                <div class="izquierda"></div>
+                <div class="derecha">
+                    <div class="grabar">
+                        <button class="imgCamara">
+                            <img src="img/camera.svg" alt="cámara video">
+                        </button>
+                    <button class="botonCapturar" id="btn-start-recording">
+                        Capturar
+                    </button>
+                    <div class="stop">
+<button class="imgCamara">
+    <img src="img/camera.svg" alt="cámara video">
+</button>
+<button class="botonCapturar" id="btn-start-recording">
+    Capturar
+</button>
+                    </div>
+                </div>
+                    
+            </div>
             </div>
         </section>
 
         <section cz-shortcut-listen="true">
-            <button id="btn-start-recording">Start Recording</button>
             <button id="btn-stop-recording" disabled>
                 Stop Recording
             </button>
