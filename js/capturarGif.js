@@ -97,3 +97,5 @@ btnComenzarPimero.addEventListener('click', () => {
 
   videoPrevio();
 });
+
+
