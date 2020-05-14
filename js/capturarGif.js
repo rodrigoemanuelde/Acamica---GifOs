@@ -20,8 +20,8 @@ const constraints = {
   audio: false,
   video: {
     width: 1100,
-    height: 570
-  }
+    height: 570,
+  },
 };
 //cerrar segundo menú
 const cerrar = document.getElementById('closeButton');
@@ -29,7 +29,6 @@ const cerrar = document.getElementById('closeButton');
 //botones de Capturar y de Grabar
 const grabar = document.getElementById('grabar');
 const stopGrabar = document.getElementById('stop');
-
 
 //--------------------------------------------------------------
 //Regresar a la página index
@@ -44,7 +43,6 @@ back2.addEventListener('click', () => {
 btnCancelarPrimero.addEventListener('click', () => {
   location.assign('..//index.html');
 });
-
 
 //-------------------------------------------------------------
 //Capturar el video
@@ -139,11 +137,10 @@ btnComenzarPimero.addEventListener('click', () => {
     });
 });
 
-
 //Para volver al inicio
 
 cerrar.addEventListener('click', (e) => {
-  e.preventDefault()
-  cuadroSegundo.style.display = 'none'
-  caja1.style.display = 'block'
-})
+  e.preventDefault();
+  cuadroSegundo.style.display = 'none';
+  caja1.style.display = 'block';
+});
