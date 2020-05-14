@@ -1,3 +1,7 @@
+//Giphy
+const apiKey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
+const urlUpload = 'https://upload.giphy.com/v1/gifs?api_key=';
+const urlId = 'https://api.giphy.com/v1/gifs/';
 //video
 const image = document.getElementById('video');
 const video = document.getElementById('videoPrevio');
@@ -70,10 +74,55 @@ function captureCamera(callback) {
 
 function stopRecordingCallback() {
   image.src = URL.createObjectURL(recorder.getBlob());
+  //Archivo para utilizar
+  let form = new FormData();
+  form.append("file", recorder.getBlob(), "myGif.gif");
+  console.log(form.get("file"));
+  //Subir gifo
+  subriGifo.addEventListener('click', () => {
+    //evento click para cancelar subida de gif
+
+    SubirGif();
+  })
+
+
+  //Stop
   recorder.camera.stop();
   recorder.destroy();
   recorder = null;
 }
+
+function SubirGif() {
+  //fetch para subir gif a Giphy
+  fetch(urlUpload + apiKey, {
+    method: "POST",
+    body: form
+  })
+    .then(response => {
+      //console.log(response.status);
+      return response.json();
+    })
+    .then(data => {
+      const dataid = data.data.id;
+      //bajarGifSubido();-----------------------
+    })
+    .catch(error => {
+      return error;
+    });
+}
+
+//Bajar gif por id -------------------------------
+/* function bajarGifSubido() {
+  fetch(urlId + dataid + "?&api_key=" + apiKey)
+    .then(response => {
+      console.log(response.status);
+      return response.json();
+    })
+    .then(data => {
+      let imagen = document.querySelector(".results_img0");
+      imagen.setAttribute("src", data.data.images.downsized.url);
+      imagen.setAttribute("alt", data.data.title);
+    }) */
 
 let recorder;
 
@@ -122,6 +171,7 @@ btnParar.addEventListener('click', () => {
   stopGrabar.style.display = 'none';
   //Finalizo el timer
   temporizador()
+
 });
 
 //Activar la cámara
