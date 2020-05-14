@@ -148,7 +148,7 @@
 
 .crear-gifo {
   width: 684px;
-  margin: 75px auto 40px auto;
+  margin: 75px auto 80px auto;
   background: #e6e6e6;
   box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
   padding: 2px;
@@ -357,6 +357,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 13px;
 }
 
 .botonGrabar {
@@ -398,6 +399,7 @@
   width: 144px;
   height: 36px;
   margin-right: 16px;
+  cursor: pointer;
 }
 
 #subirGifo {
@@ -412,6 +414,7 @@
   line-height: 18px;
   width: 144px;
   height: 36px;
+  cursor: pointer;
 }
 
 #botonesFinales {
