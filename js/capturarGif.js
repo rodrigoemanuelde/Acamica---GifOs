@@ -30,6 +30,8 @@ const cerrar = document.getElementById('closeButton');
 const grabar = document.getElementById('grabar');
 const stopGrabar = document.getElementById('stop');
 
+//Ultimos botones
+
 //--------------------------------------------------------------
 //Regresar a la página index
 back1.addEventListener('click', () => {
@@ -117,6 +119,7 @@ btnParar.addEventListener('click', () => {
 //Activar la cámara
 
 btnComenzarPimero.addEventListener('click', () => {
+
   //oculto la botonera de grabación
   stopGrabar.style.display = 'none';
   // oculto la captura de video
