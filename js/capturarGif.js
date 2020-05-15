@@ -117,11 +117,11 @@ function stopRecordingCallback() {
               return response.json();
             })
             .then(data => {
-              console.log(data.data.url);
+              console.log(data.data.images.fixed_height_downsampled.url);
               console.log(data.data.title);
-              console.log(insertarGif);
+              console.log(data.data);
 
-              insertarGif.innerHTML += `<img src="${data.data.url}" alt="${data.data.title}" width="365" height="191" display="block">`
+              insertarGif.innerHTML += `<img src="${data.data.images.fixed_height_downsampled.url}" alt="${data.data.title}" width="365" height="191" display="block">`
             })
             .catch(error => {
               return error;
