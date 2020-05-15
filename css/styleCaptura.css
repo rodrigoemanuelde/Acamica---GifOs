@@ -420,3 +420,206 @@
 #botonesFinales {
   display: flex;
 }
+
+
+#esparaSubir {
+  padding: 4px;
+  width: 860px;
+  height: 548px;
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+.barraTercera {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  height: 24px;
+}
+
+.barraTercera p {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0;
+  align-content: center;
+  padding-left: 4px;
+}
+
+.barraTercera img {
+  padding-right: 7px;
+  cursor: pointer;
+}
+
+.espacioGlobo {
+  width: 838px;
+  height: 440px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.espacioGlobo img {
+  margin-top: 139px;
+  margin-left: 398px;
+}
+
+.espacioGlobo h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 22px;
+  margin-top: 8px;
+}
+
+.barraEstado {
+  width: 324px;
+  height: 24px;
+  background: #B4B4B4;
+  box-shadow: inset 2px 2px 0 0 #FFFCFC, inset -2px -2px 0 0 #000000;
+  display: grid;
+  grid-template-columns: repeat(23, 1fr);
+  padding: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 39px;
+}
+
+.barraEstado .pink {
+  margin-top: 2px;
+  width: 12px;
+  height: 20px;
+  background: #F7C9F3;
+}
+
+.barraEstado .grey {
+  margin-top: 2px;
+  width: 12px;
+  height: 20px;
+  background: #999999;
+}
+
+.espacioGlobo p {
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: rgba(17, 0, 56, 0.64);
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 14px;
+  margin-top: 10px;
+}
+
+.espacioGlobo p span {
+  text-decoration: line-through;
+}
+
+.espacioBS {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#cancelarSubida {
+  width: 134px;
+  height: 36px;
+  margin-top: 21px;
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+#exito {
+  width: 721px;
+  height: 391px;
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+  margin-bottom: 80px;
+  margin-top: 75px;
+}
+
+.espacioExito {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#insertarGif {
+  width: 365px;
+  height: 191px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  margin-left: 27px;
+  margin-top: 29px;
+}
+
+.botonesExito {
+  margin-left: 27px;
+  margin-top: 49px;
+}
+
+.botonesExito h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+#copiarEnlace,
+#descargarGif {
+  width: 265px;
+  height: 36px;
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#listo {
+  width: 144px;
+  height: 36px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  margin-top: 64px;
+  margin-left: 531px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}

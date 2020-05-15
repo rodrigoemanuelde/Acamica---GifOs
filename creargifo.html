@@ -87,13 +87,13 @@
                 <p>Un Chequeo Antes de Empezar</p>
                 <img id="closeButton" src="img/button close.svg" alt="botón para cerrar la ventana">
             </div>
+            <!-- ----------------------------------------------- -->
             <div class="espacioVideos">
                 <video id="videoPrevio"></video />
                 <img id="video" />
-
             </div>
+            <!-- --------------------------------------- -->
             <div class="espacioBotones">
-
                 <div class="izquierda">
                     <div id="hms">00:00:00</div>
                 </div>
@@ -118,17 +118,21 @@
                         <button id="repetirCaptura">Repetir Captura</button>
                         <button id="subirGifo">Subir Guifo</button>
                     </div>
+                    <div id="botonSubirGif">
+                        <button id="cancelarSubida">Cancelar</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="subirGif">
-            <div class="barraSegunda">
-                <p>Un Chequeo Antes de Empezar</p>
+        <!-- ------------------------------------------- -->
+        <section id="esparaSubir">
+            <div class="barraTercera">
+                <p>Subiendo Guifo</p>
                 <img id="closeButton" src="img/button close.svg" alt="botón para cerrar la ventana">
             </div>
             <div class="espacioGlobo">
                 <img src="img/globe_img.png" alt="globo">
-                <p>Estamos subiendo tu guifo…</p>
+                <h4>Estamos subiendo tu guifo…</h4>
                 <div class="barraEstado">
                     <p class="pink"></p>
                     <p class="pink"></p>
@@ -156,7 +160,29 @@
                 </div>
                 <p>Tiempo restante: <span>38 años</span> algunos minutos</p>
             </div>
-            <button id="cancelarSubida">Cancelar</button>
+            <div class="espacioBS">
+                <button id="cancelarSubida">Cancelar</button>
+            </div>
+        </section>
+        <section id="exito">
+            <div class="barraTercera">
+                <p>Subiendo Guifo</p>
+                <img id="closeButton" src="img/button close.svg" alt="botón para cerrar la ventana">
+            </div>
+            <div class="espacioExito">
+                <div id="insertarGif"></div>
+                <div class="botonesExito">
+                    <h4>Guifo creado con éxito</h4>
+                    <button id="copiarEnlace">Copiar Enlace Guifo</button>
+                    <br>
+                    <button id="descargarGif">Descargar Guifo</button>
+                </div>
+
+            </div>
+            <div>
+                <button id="listo">Listo</button>
+            </div>
+
         </section>
     </main>
     <footer>
