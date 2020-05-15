@@ -261,6 +261,7 @@
 
 .barraSegunda img {
   padding-right: 7px;
+  cursor: pointer;
 }
 
 /* Tamaño de los videos a renderizar*/
@@ -431,6 +432,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
+  display: none;
 }
 
 .barraTercera {
@@ -559,6 +561,7 @@
   padding: 4px;
   margin-bottom: 80px;
   margin-top: 75px;
+  display: none;
 }
 
 .espacioExito {

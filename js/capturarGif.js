@@ -28,7 +28,7 @@ const constraints = {
   },
 };
 //cerrar segundo menú
-const cerrar = document.getElementById('closeButton');
+const closeButton = document.getElementById('closeButton');
 
 //botones de Capturar y de Grabar
 const grabar = document.getElementById('grabar');
@@ -42,6 +42,17 @@ const subriGifo = document.getElementById('subirGifo');
 //Insertar contador
 let horaComienzo;
 const timer = document.getElementById('hms');
+
+//Espera para subir Gif a giphy
+const esparaSubir = document.getElementById('esparaSubir');
+const closeSubir = document.getElementById('closeSubir');
+const cancelarSubida = document.getElementById('cancelarSubida');
+
+//Exito en la operación de subida
+const exito = document.getElementById('exito')
+const closeExito = document.getElementById('closeExito');
+const listo = document.getElementById('listo')
+const insertarGif = document.getElementById('insertarGif');
 //--------------------------------------------------------------
 //Regresar a la página index
 back1.addEventListener('click', () => {
@@ -75,54 +86,65 @@ function captureCamera(callback) {
 function stopRecordingCallback() {
   image.src = URL.createObjectURL(recorder.getBlob());
   //Archivo para utilizar
-  let form = new FormData();
+  const form = new FormData();
   form.append("file", recorder.getBlob(), "myGif.gif");
   console.log(form.get("file"));
   //Subir gifo
   subriGifo.addEventListener('click', () => {
     //evento click para cancelar subida de gif
+    capturarGifo.style.display = 'none'
+    esparaSubir.style.display = 'block';
+    setTimeout(() => {
+      esparaSubir.style.display = 'none';
+      exito.style.display = 'block';
+      // ------------------------------------------------------//
+      //fetch para subir gif a Giphy
+      fetch(urlUpload + apiKey, {
+        method: "POST",
+        body: form
+      })
+        .then(response => {
+          //console.log(response.status);
+          return response.json();
+        })
+        .then(data => {
+          const dataid = data.data.id;
 
-    SubirGif();
-  })
+          //Bajar gif por id -------------------------------//
+          fetch(`${urlId}${dataid}?&api_key=${apiKey}`)
+            .then(response => {
+              console.log(response.status);
+              return response.json();
+            })
+            .then(data => {
+              console.log(data.data.url);
+              console.log(data.data.title);
+              console.log(insertarGif);
 
+              insertarGif.innerHTML += `<img src="${data.data.url}" alt="${data.data.title}" width="365" height="191" display="block">`
+            })
+            .catch(error => {
+              return error;
+            })
+
+        })
+        .catch(error => {
+          return error;
+        });
+    }, 6000)
+  });
 
   //Stop
   recorder.camera.stop();
   recorder.destroy();
   recorder = null;
 }
+/*Cancelar subida a el servidor de Giphy */
+cancelarSubida.addEventListener('click', () => {
+  crearGifo.style.display = 'block';
+  esparaSubir.style.display = 'none';
+})
 
-function SubirGif() {
-  //fetch para subir gif a Giphy
-  fetch(urlUpload + apiKey, {
-    method: "POST",
-    body: form
-  })
-    .then(response => {
-      //console.log(response.status);
-      return response.json();
-    })
-    .then(data => {
-      const dataid = data.data.id;
-      //bajarGifSubido();-----------------------
-    })
-    .catch(error => {
-      return error;
-    });
-}
-
-//Bajar gif por id -------------------------------
-/* function bajarGifSubido() {
-  fetch(urlId + dataid + "?&api_key=" + apiKey)
-    .then(response => {
-      console.log(response.status);
-      return response.json();
-    })
-    .then(data => {
-      let imagen = document.querySelector(".results_img0");
-      imagen.setAttribute("src", data.data.images.downsized.url);
-      imagen.setAttribute("alt", data.data.title);
-    }) */
 
 let recorder;
 
@@ -200,14 +222,29 @@ btnComenzarPimero.addEventListener('click', () => {
 });
 
 //Para volver al inicio
-
-cerrar.addEventListener('click', (e) => {
+closeButton.addEventListener('click', (e) => {
   e.preventDefault();
   capturarGifo.style.display = 'none';
   crearGifo.style.display = 'block';
   //cerrar el video
-  cerrarVideo();
+  recorder.stopRecording(stopRecordingCallback);
 });
+
+//Cerrar esperar para subir Gifo
+closeSubir.addEventListener('click', (e) => {
+  e.preventDefault();
+  capturarGifo.style.display = 'none';
+  crearGifo.style.display = 'block';
+  esparaSubir.style.display = 'none';
+  cerrarVideo();
+})
+
+//Cerrar exito en la captura del Gifo
+closeExito.addEventListener('click', () => {
+  crearGifo.style.display = 'block';
+  capturarGifo.style.display = 'none';
+  exito.style.display = 'none';
+})
 
 //Botón para repetir Captura
 repetirCaptura.addEventListener('click', (e) => {
