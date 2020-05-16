@@ -1,5 +1,3 @@
-// Despliega los botones de Sailor Day & Sailor Night
-
 //constantes
 const dropdownPrincipal = document.getElementById('dropbtn');
 const dropdownSecundario = document.getElementById('myDropdown');

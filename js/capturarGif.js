@@ -53,6 +53,12 @@ const exito = document.getElementById('exito')
 const closeExito = document.getElementById('closeExito');
 const listo = document.getElementById('listo')
 const insertarGif = document.getElementById('insertarGif');
+
+//Array de Guifos
+const arrayGuifos = [];
+
+//Mis gif
+const misGif = document.getElementById('misGif')
 //--------------------------------------------------------------
 //Regresar a la página index
 back1.addEventListener('click', () => {
@@ -121,7 +127,17 @@ function stopRecordingCallback() {
               console.log(data.data.title);
               console.log(data.data);
 
-              insertarGif.innerHTML += `<img src="${data.data.images.fixed_height_downsampled.url}" alt="${data.data.title}" width="365" height="191" display="block">`
+              insertarGif.innerHTML += `<img src="${data.data.images.fixed_height_downsampled.url}" alt="${data.data.title}" width="365" height="191" display="block">`;
+
+              //localstorage
+              if (localStorage.getItem("guifos") == null) {
+                arrayGuifos.push(data);
+                localStorage.setItem("guifos", JSON.stringify(arrayGuifos));
+              } else {
+                arrayGuifos = JSON.parse(localStorage.getItem("guifos"));
+                arrayGuifos.push(data);
+                localStorage.setItem("guifos", JSON.stringify(arrayGuifos));
+              }
             })
             .catch(error => {
               return error;
@@ -262,6 +278,11 @@ function cerrarVideo() {
     track.stop();
   });
 }
+
+//Creación de galería de misGifos
+
+
+
 
 //contador de tiempo
 function temporizador() {

@@ -7,6 +7,7 @@
     <title>misGif</title>
     <link rel="stylesheet" href="css/style.css" />
     <link id="favicon" rel="icon" type="image/png" href="" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -18,21 +19,18 @@
             </p>
         </section>
     </header>
-
     <nav class="nav">
-        <img id="logo" src="" alt="logo GifOf" />
+        <img id="logo" src="#" alt="logo GifOf" />
         <div class="botones">
             <button class="crear" id="crear">
-                <a href="#">Crear Gifo</a>
+                Crear Gifo
             </button>
 
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">
+                <button class="dropbtn" id="dropbtn">
                     Elegir tema
                     <span></span>
-                    <i onclick="myFunction()">
-                        <img onclick="myFunction()" src="img/dropdown.svg" alt="flecha abajo menu" />
-                    </i>
+                    <img alt="flecha abajo menu" id="arrow" />
                 </button>
                 <div id="myDropdown" class="dropdown-content">
                     <ul>
@@ -45,23 +43,33 @@
                     </ul>
                 </div>
             </div>
-            <a href="#" class="mis" id="misGif"> <span class="m">M</span>is gifos</a>
+            <a href="#" class="mis" id="misGif">
+                <span class="m">M</span>is gifos</a>
         </div>
     </nav>
-    <main>
 
+    <main>
+        <div class="misGifos">
+            <p>Mis guifos</p>
+        </div>
+        <div id="insertarMisGif">
+
+        </div>
     </main>
-    <footer>
-        <section class="barra-footer">
+    <footer class="footerMisGifos">
+        <section class="barra-footer-mis">
             <p>
                 ©Copyright 2020 by Rodrigoemanuelde. All rights reversed.
             </p>
         </section>
     </footer>
-    <script src="js/contador.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/page.js"></script>
+    <script type="module" src="js/random.js"></script>
+    <script type="module" src="js/tend.js"></script>
+    <script type="module" src="js/search.js"></script>
+    <script type="module" src="js/contador.js"></script>
+    <script type="module" src="js/theme.js"></script>
+    <script type="module" src="js/dropdown.js"></script>
+    <script type="module" src="js/page.js"></script>
 </body>
 
 </html>
