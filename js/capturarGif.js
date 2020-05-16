@@ -127,15 +127,15 @@ function stopRecordingCallback() {
               console.log(data.data.title);
               console.log(data.data);
 
-              insertarGif.innerHTML += `<img src="${data.data.images.fixed_height_downsampled.url}" alt="${data.data.title}" width="365" height="191" display="block">`;
+              insertarGif.innerHTML = `<img src="${data.data.images.fixed_height_downsampled.url}" alt="${data.data.title}" width="365" height="191" display="block">`;
 
               //localstorage
               if (localStorage.getItem("guifos") == null) {
-                arrayGuifos.push(data);
+                arrayGuifos.push(data.data.images.fixed_height_downsampled.url);
                 localStorage.setItem("guifos", JSON.stringify(arrayGuifos));
               } else {
                 arrayGuifos = JSON.parse(localStorage.getItem("guifos"));
-                arrayGuifos.push(data);
+                arrayGuifos.push(data.data.images.fixed_height_downsampled.url);
                 localStorage.setItem("guifos", JSON.stringify(arrayGuifos));
               }
             })
@@ -147,7 +147,7 @@ function stopRecordingCallback() {
         .catch(error => {
           return error;
         });
-    }, 6000)
+    }, 4000)
   });
 
   //Stop
@@ -155,12 +155,16 @@ function stopRecordingCallback() {
   recorder.destroy();
   recorder = null;
 }
+
+
+
+//---------------------------------------------------------
 /*Cancelar subida a el servidor de Giphy */
 cancelarSubida.addEventListener('click', () => {
   crearGifo.style.display = 'block';
   esparaSubir.style.display = 'none';
 })
-
+//----------------------------------------------------------
 
 let recorder;
 
@@ -212,6 +216,7 @@ btnParar.addEventListener('click', () => {
 
 });
 
+//---------------------------------------------------------------
 //Activar la cámara
 
 btnComenzarPimero.addEventListener('click', () => {
@@ -278,10 +283,6 @@ function cerrarVideo() {
     track.stop();
   });
 }
-
-//Creación de galería de misGifos
-
-
 
 
 //contador de tiempo
