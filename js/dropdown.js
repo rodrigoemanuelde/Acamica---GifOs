@@ -1,3 +1,5 @@
+/*  Despliega los botones */
+
 //constantes
 const dropdownPrincipal = document.getElementById('dropbtn');
 const dropdownSecundario = document.getElementById('myDropdown');
