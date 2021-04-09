@@ -1,4 +1,4 @@
-const api = 'api_key=DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
+const api = 'api_key=mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx';
 const url2 = 'https://api.giphy.com/v1/gifs/trending?';
 
 const gifsBox = document.querySelector('.tend');
