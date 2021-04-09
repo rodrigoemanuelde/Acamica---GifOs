@@ -3,7 +3,7 @@
  } from './search.js';
 
  const url = 'https://api.giphy.com/v1/gifs/random?';
- const apiKey = 'mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx';
+ const apiKey = 'kCXSuCq9QhFJiAvhwKi1VyIP6LZWnZTY';
  const btnRandom0 = document.getElementById('btn-random0');
  const btnRandom1 = document.getElementById('btn-random1');
  const btnRandom2 = document.getElementById('btn-random2');
