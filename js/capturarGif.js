@@ -1,5 +1,5 @@
 //Giphy
-const apiKey = 'DmRJY1L77G6uZ6eloQQd0cXSfD6OsEXC';
+const apiKey = 'mmvn9BQ98KLdBeCFwNbuvaOUSu0MMeEx';
 const urlUpload = 'https://upload.giphy.com/v1/gifs?api_key=';
 const urlId = 'https://api.giphy.com/v1/gifs/';
 //video
